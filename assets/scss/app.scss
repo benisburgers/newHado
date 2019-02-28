@@ -3,6 +3,7 @@
 @import 'settings';
 @import 'foundation';
 @import 'motion-ui';
+@import 'flicker';
 
 // Global styles
 @include foundation-global-styles;
@@ -12,7 +13,7 @@
 // Grids (choose one)
 @include foundation-xy-grid-classes;
 // @include foundation-grid;
-// @include foundation-flex-grid;
+@include foundation-flex-grid;
 
 // Generic components
 @include foundation-button;
@@ -62,3 +63,60 @@
 // Motion UI
 @include motion-ui-transitions;
 @include motion-ui-animations;
+
+
+
+// Custom styles
+
+body {
+  background: black;
+}
+
+* {
+  color: white;
+}
+
+h1 {
+  font-family: Dosis;
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 2.16px;
+  line-height: 29px;
+  text-shadow: -3px 0 21px 0 #FFFFFF;
+  text-transform: uppercase;
+}
+
+p {
+  font-family: "Open Sans";
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 0.42px;
+  line-height: 20px;
+}
+
+.top-bar {
+  background: linear-gradient(black, rgba(255, 0, 0, 0));
+  * {
+    background-color: rgba(255, 0, 0, 0) !important;
+    color: white !important;
+    &:hover{
+      color: $primary-color !important;
+    }
+  }
+}
+
+.flickering-line {
+  height: 2px;
+  width: 100%;
+  border-radius: 1px;
+  background: $primary-color;
+  box-shadow: 0px 0px 20px 10px rgba(126, 211, 33, .3);
+}
+
+.primary-text {
+  color: $primary-color;
+}
+
+.button {
+  box-shadow: 0 0 20px 10px rgba($primary-color, .3) inset, 0 0 20px 10px rgba($primary-color, .3);
+}
