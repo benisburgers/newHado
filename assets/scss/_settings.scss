@@ -436,18 +436,18 @@ $input-font-family: inherit;
 $input-font-size: rem-calc(16);
 $input-font-weight: $global-weight-normal;
 $input-line-height: $global-lineheight;
-$input-background: $white;
-$input-background-focus: $white;
+$input-background: rgba(255, 0, 0, 0);
+$input-background-focus: rgba(255, 0, 0, 0);
 $input-background-disabled: $light-gray;
-$input-border: 1px solid $medium-gray;
-$input-border-focus: 1px solid $dark-gray;
+$input-border: 1px solid #515151;
+$input-border-focus: 1px solid $primary-color;
 $input-padding: $form-spacing / 2;
-$input-shadow: inset 0 1px 2px rgba($black, 0.1);
-$input-shadow-focus: 0 0 5px $medium-gray;
+$input-shadow: none;
+$input-shadow-focus: 0 0 5px $primary-color;
 $input-cursor-disabled: not-allowed;
 $input-transition: box-shadow 0.5s, border-color 0.25s ease-in-out;
 $input-number-spinners: true;
-$input-radius: $global-radius;
+$input-radius: 8px;
 $form-button-radius: $global-radius;
 
 // 21. Label
@@ -756,17 +756,17 @@ $slider-radius: $global-radius;
 // 49. Switch
 // ----------
 
-$switch-background: $medium-gray;
+$switch-background: rgba(255, 0, 0, 0);
 $switch-background-active: $primary-color;
-$switch-height: 2rem;
+$switch-height: 1rem;
 $switch-height-tiny: 1.5rem;
 $switch-height-small: 1.75rem;
 $switch-height-large: 2.5rem;
-$switch-radius: $global-radius;
+$switch-radius: 2rem;
 $switch-margin: $global-margin;
-$switch-paddle-background: $white;
-$switch-paddle-offset: 0.25rem;
-$switch-paddle-radius: $global-radius;
+$switch-paddle-background: #C4C4C4;
+$switch-paddle-offset: 0;
+$switch-paddle-radius: 50%;
 $switch-paddle-transition: all 0.25s ease-out;
 
 // 50. Table

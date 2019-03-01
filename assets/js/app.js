@@ -15,3 +15,22 @@ require('foundation-sites');
 
 
 $(document).foundation();
+
+
+$( document ).ready(function() {
+
+  //This whole function is used to highlight the border of the date-option element depending on which date the visitor has selected
+    var switchInput = $( ".switch-input" );
+    var highlightDateOption = function() {
+      var activeInput = $( ".switch-input:checked" );
+      var parent = activeInput.parents('.date-option');
+      parent.addClass('primary-border');
+
+      var inactiveInput = $( ".switch-input:not(:checked)" );
+      var inactiveParent = inactiveInput.parents('.date-option');
+      inactiveParent.removeClass('primary-border');
+
+    }
+    highlightDateOption();
+    switchInput.on( "click", highlightDateOption );
+});

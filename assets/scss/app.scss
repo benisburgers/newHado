@@ -73,7 +73,7 @@ body {
 }
 
 * {
-  color: white;
+  color: white !important;
 }
 
 h1 {
@@ -84,6 +84,15 @@ h1 {
   line-height: 29px;
   text-shadow: -3px 0 21px 0 #FFFFFF;
   text-transform: uppercase;
+}
+
+h2 {
+	font-family: Dosis;
+	font-size: 24px;
+	font-weight: 500;
+	letter-spacing: 2.16px;
+	line-height: 29px;
+	text-shadow: -3px 0 21px 0 #FFFFFF;
 }
 
 p {
@@ -119,4 +128,54 @@ p {
 
 .button {
   box-shadow: 0 0 20px 10px rgba($primary-color, .3) inset, 0 0 20px 10px rgba($primary-color, .3);
+}
+
+.date-option {
+  padding: 15px;
+  border: 1px solid #515151;
+  border-radius: 8px;
+}
+
+.date-top, .date-bottom {
+  display: flex;
+  justify-content: space-between;
+}
+
+.date, .date-free-places {
+	font-family: Dosis;
+	font-size: 14px;
+	font-weight: 500;
+	letter-spacing: 0.62px;
+	line-height: 16px;
+}
+.date-free-places {
+  text-transform: uppercase;
+}
+.date-bottom {
+  display: flex;
+  align-items: flex-end;
+}
+.date-number-of-places {
+	font-family: "Open Sans";
+	font-size: 40px;
+	font-weight: 300;
+	letter-spacing: 0.22px;
+	line-height: 40px;
+}
+
+.switch {
+  margin-bottom: 0;
+}
+
+.primary-border {
+  border: 1px solid $primary-color;
+}
+
+.switch-paddle {
+  border: 1px solid #D5D5D5;
+  box-sizing: content-box;
+}
+.test {
+  width: 100%;
+  border: 10px solid blue;
 }
