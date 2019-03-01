@@ -93,14 +93,31 @@ h2 {
 	letter-spacing: 2.16px;
 	line-height: 29px;
 	text-shadow: -3px 0 21px 0 #FFFFFF;
+  text-transform: uppercase;
 }
 
 p {
   font-family: "Open Sans";
   font-size: 14px;
-  font-weight: bold;
   letter-spacing: 0.42px;
   line-height: 20px;
+}
+
+label {
+	font-family: Dosis;
+	font-size: 16px;
+	font-weight: 500;
+	letter-spacing: 0.28px;
+	line-height: 20px;
+  text-transform: uppercase;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.primary-text {
+  color: $primary-color;
 }
 
 .top-bar {
@@ -122,12 +139,9 @@ p {
   box-shadow: 0px 0px 20px 10px rgba(126, 211, 33, .3);
 }
 
-.primary-text {
-  color: $primary-color;
-}
-
 .button {
   box-shadow: 0 0 20px 10px rgba($primary-color, .3) inset, 0 0 20px 10px rgba($primary-color, .3);
+  transition: all 0.25s ease-in-out;
 }
 
 .date-option {
@@ -147,6 +161,7 @@ p {
 	font-weight: 500;
 	letter-spacing: 0.62px;
 	line-height: 16px;
+  text-transform: uppercase;
 }
 .date-free-places {
   text-transform: uppercase;
@@ -167,15 +182,43 @@ p {
   margin-bottom: 0;
 }
 
+// .switch {
+//   input:checked {
+//     ~label {
+//       border: 1px solid $primary-color;
+//     }
+//   }
+// }
+
 .primary-border {
   border: 1px solid $primary-color;
+  box-shadow: 0 0 5px $primary-color;
 }
 
 .switch-paddle {
   border: 1px solid #D5D5D5;
   box-sizing: content-box;
 }
-.test {
-  width: 100%;
-  border: 10px solid blue;
+
+.anmelde-formular {
+  input {
+    font-family: Dosis;
+  	font-size: 16px;
+  	font-weight: 500;
+  	letter-spacing: 0.28px;
+  	line-height: 20px;
+  }
+}
+
+.footer-small-logos {
+  background: red;
+  display: flex;
+  justify-content: space-between;
+}
+
+input {
+  &.disabled {
+    border: 1px solid rgba(#7ED321, .25);
+    box-shadow: none;
+  }
 }

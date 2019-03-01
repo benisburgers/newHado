@@ -439,10 +439,10 @@ $input-line-height: $global-lineheight;
 $input-background: rgba(255, 0, 0, 0);
 $input-background-focus: rgba(255, 0, 0, 0);
 $input-background-disabled: $light-gray;
-$input-border: 1px solid #515151;
+$input-border: 1px solid $primary-color;
 $input-border-focus: 1px solid $primary-color;
 $input-padding: $form-spacing / 2;
-$input-shadow: none;
+$input-shadow: 0 0 5px $primary-color;
 $input-shadow-focus: 0 0 5px $primary-color;
 $input-cursor-disabled: not-allowed;
 $input-transition: box-shadow 0.5s, border-color 0.25s ease-in-out;
@@ -757,7 +757,7 @@ $slider-radius: $global-radius;
 // ----------
 
 $switch-background: rgba(255, 0, 0, 0);
-$switch-background-active: $primary-color;
+$switch-background-active: rgba($primary-color, .7);
 $switch-height: 1rem;
 $switch-height-tiny: 1.5rem;
 $switch-height-small: 1.75rem;

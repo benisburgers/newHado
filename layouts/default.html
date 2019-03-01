@@ -15,5 +15,13 @@
 {{> body}}
 
 <script src="{{root}}assets/js/app.js"></script>
+<script>
+  // event listener for form submit
+  document.getElementById("ajaxButton").addEventListener('click', function(e) {
+    e.preventDefault();
+    	makeRequest(valid);
+  }, false);
+</script>
+</script>
 </body>
 </html>
