@@ -84,6 +84,7 @@ h1 {
   line-height: 29px;
   text-shadow: -3px 0 21px 0 #FFFFFF;
   text-transform: uppercase;
+  margin-bottom: 20px;
 }
 
 h2 {
@@ -94,6 +95,15 @@ h2 {
 	line-height: 29px;
 	text-shadow: -3px 0 21px 0 #FFFFFF;
   text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+h3 {
+	font-family: "Open Sans";
+	font-size: 18px;
+	letter-spacing: 0.31px;
+	line-height: 24px;
+	text-align: center;
 }
 
 p {
@@ -101,6 +111,7 @@ p {
   font-size: 14px;
   letter-spacing: 0.42px;
   line-height: 20px;
+  margin-bottom: 45px;
 }
 
 label {
@@ -110,6 +121,10 @@ label {
 	letter-spacing: 0.28px;
 	line-height: 20px;
   text-transform: uppercase;
+}
+
+section {
+  margin-bottom: 120px;
 }
 
 .bold {
@@ -131,6 +146,16 @@ label {
   }
 }
 
+.menu {
+  a {
+	font-family: Dosis;
+	font-size: 13px;
+	font-weight: 500;
+	letter-spacing: 0.36px;
+	line-height: 16px;
+  }
+}
+
 .flickering-line {
   height: 2px;
   width: 100%;
@@ -148,6 +173,14 @@ label {
   padding: 15px;
   border: 1px solid #515151;
   border-radius: 8px;
+  margin-bottom: 25px;
+  &:last-child {
+    margin-bottom: 0px;
+  }
+}
+
+.date-top {
+  margin-bottom: 10px;
 }
 
 .date-top, .date-bottom {
@@ -201,6 +234,9 @@ label {
 }
 
 .anmelde-formular {
+  label {
+    margin-bottom: 7.5px;
+  }
   input {
     font-family: Dosis;
   	font-size: 16px;
@@ -208,6 +244,10 @@ label {
   	letter-spacing: 0.28px;
   	line-height: 20px;
   }
+}
+
+.input-fields-container {
+  margin-bottom: 20px;
 }
 
 .footer-small-logos {
@@ -219,5 +259,25 @@ input {
   &.disabled {
     border: 1px solid rgba(#7ED321, .25);
     box-shadow: none;
+  }
+}
+
+.standort-map {
+  margin-bottom: 30px;
+}
+
+footer {
+  padding-bottom: 100px;
+  .title {
+    display: inline-block;
+    font-family: "Open Sans";
+    font-size: 18px;
+    letter-spacing: 0.31px;
+    line-height: 24px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .buhler-logo {
+    margin-bottom: 75px;
   }
 }
