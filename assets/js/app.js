@@ -36,14 +36,13 @@ $( document ).ready(function() {
     switchInput.on( "click", highlightDateOption );
 
 
+
+    var name = $("#name_input"),
+        email = $("#mail_input"),
+        phone = $("#phone_input"),
+        valid = false;
     validate();
     function validate() {
-
-      var name = $("#name_input"),
-          email = $("#mail_input"),
-          phone = $("#phone_input"),
-          valid = false;
-
           //Validate Form
 
         //Check form validity everytime value in input field is changed
@@ -101,39 +100,8 @@ $( document ).ready(function() {
         checkMandatory();
     }
 
-    function makeRequest(isValid) {
-      //access entered email value for confirmation
-      if(isValid) {
-        // declare form element
-        var formElement = document.getElementById("anmelde_formular");
-
-        var httpRequest;
-
-        // create request
-          if (window.XMLHttpRequest) {
-              // code for IE7+, Firefox, Chrome, Opera, Safari
-              httpRequest = new XMLHttpRequest();
-
-              if (!httpRequest) {
-                  alert('Giving up :( Cannot create an XMLHTTP instance');
-                  return false;
-              }
-          } else {
-              // code for IE6, IE5
-              httpRequest = new ActiveXObject("Microsoft.XMLHTTP");
-          }
-
-          httpRequest.onreadystatechange = function() {
-              if (this.readyState == 4 && this.status == 200) {
-                // TODO: show confirm text if successful
-                //document.getElementById("debug").innerHTML = this.responseText;
-                console.log(this.responseText);
-              }
-        };
-
-        httpRequest.open("POST","updateuser.php", /* async = */ true);
-        httpRequest.send(new FormData(formElement));
-        hideForm();
-      }
+    function disableButton() {
+      $('#ajaxButton').addClass("disabled");
+      valid = false;
     }
 });
