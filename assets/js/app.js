@@ -104,4 +104,12 @@ $( document ).ready(function() {
       $('#ajaxButton').addClass("disabled");
       valid = false;
     }
+
+    var $lights = $('.flickering-line');
+    $lights.viewportChecker({
+        classToAdd: 'flicker-4',
+        repeat: true,
+        offset: '15%',
+        invertBottomOffset: true
+    });
 });
