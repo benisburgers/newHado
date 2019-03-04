@@ -1,33 +1,26 @@
-<section class="form">
-  <div class="anchor-target" id="anmelden"></div>
-  <div class="rows">
-    <div class="columns small-12">
-      <form class="anmelde-formular novalidate" id="anmelde_formular">
-        <div class="input-fields-container">
-          <div class="name">
-            <label for="name_input">Name</label>
-            <input class="input" type="text" id="name_input" placeholder="Bitte aüsfüllen" regex='name'>
-          </div>
-          <div class="phone">
-            <label for="phone_input">Telefon</label>
-            <input class="input" type="text" id="phone_input" placeholder="Bitte aüsfüllen" regex='phone'>
-          </div>
-          <div class="mail">
-            <label for="mail_input">E-Mail</label>
-            <input class="input" type="text" id="mail_input" placeholder="Bitte aüsfüllen" regex='email'>
-          </div>
-          <div class="entourage">
-            <label for="entourage_checkbox">Begleitperson</label>
-            <div class="switch">
-              <input class="switch-input" id="guestSwitch" type="checkbox" name="guestSwitch">
-              <label class="switch-paddle" for="guestSwitch">
-                <span class="show-for-sr">Begleitung</span>
-              </label>
-            </div>
-          </div>
-        </div>
-        <input type="submit" class="button expanded hollow disabled" value="Anmelden" id="ajaxButton">
-      </form>
+<form class="anmelde-formular novalidate" id="anmelde_formular">
+  <div class="input-fields-container">
+    <div class="name">
+      <label for="name_input">Name</label>
+      <input class="input" type="text" id="name_input" placeholder="Bitte aüsfüllen" regex='name'>
+    </div>
+    <div class="phone">
+      <label for="phone_input">Telefon</label>
+      <input class="input" type="text" id="phone_input" placeholder="Bitte aüsfüllen" regex='phone'>
+    </div>
+    <div class="mail">
+      <label for="mail_input">E-Mail</label>
+      <input class="input" type="text" id="mail_input" placeholder="Bitte aüsfüllen" regex='email'>
+    </div>
+    <div class="entourage">
+      <label for="entourage_checkbox">Begleitperson</label>
+      <div class="switch">
+        <input class="switch-input" id="guestSwitch" type="checkbox" name="guestSwitch">
+        <label class="switch-paddle" for="guestSwitch">
+          <span class="show-for-sr">Begleitung</span>
+        </label>
+      </div>
     </div>
   </div>
-</section>
+  <input type="submit" class="button expanded hollow disabled" value="Anmelden" id="ajaxButton">
+</form>

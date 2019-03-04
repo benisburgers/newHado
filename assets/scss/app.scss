@@ -280,4 +280,18 @@ footer {
   .buhler-logo {
     margin-bottom: 75px;
   }
+  .small-logos {
+    display: flex;
+    justify-content: space-between;
+  }
+  @include breakpoint(medium) {
+    .small-logos {
+      flex-direction:column;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+    .buhler-logo {
+      margin-bottom: 0;
+    }
+  }
 }
