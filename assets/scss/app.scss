@@ -143,6 +143,7 @@ section {
   padding-top: 30px;
   background: linear-gradient(black, rgba(255, 0, 0, 0));
   font-family: Dosis;
+  font-size: 15px;
   * {
     background-color: rgba(255, 0, 0, 0) !important;
   }
@@ -222,9 +223,6 @@ section {
 	line-height: 16px;
   text-transform: uppercase;
 }
-.date-free-places {
-  text-transform: uppercase;
-}
 .date-bottom {
   display: flex;
   align-items: flex-end;
@@ -240,14 +238,6 @@ section {
 .switch {
   margin-bottom: 0;
 }
-
-// .switch {
-//   input:checked {
-//     ~label {
-//       border: 1px solid $primary-color;
-//     }
-//   }
-// }
 
 .primary-border {
   border: 1px solid $primary-color;
@@ -313,6 +303,41 @@ footer {
   }
 }
 @include breakpoint(medium) {
+  h1 {
+  	font-size: 36px;
+  	font-weight: bold;
+  	letter-spacing: 2.35px;
+  	line-height: 50px;
+  }
+  h2 {
+  	font-size: 36px;
+  	font-weight: 500;
+  	letter-spacing: 0.75px;
+  	line-height: 50px;
+  }
+  p {
+  	font-size: 18px;
+  	letter-spacing: 0.5px;
+  	line-height: 35px;
+  }
+  label {
+  	font-size: 20px;
+  	font-weight: 500;
+  	letter-spacing: 0.34px;
+  	line-height: 26px;
+  }
+  .anmelde-formular {
+    input {
+      font-size: 20px;
+    	font-weight: 500;
+    	letter-spacing: 0.34px;
+    	line-height: 26px;
+    }
+  }
+  button, .button {
+  	font-size: 18px !important;
+  	letter-spacing: 0.71px;
+  }
   footer {
     .small-logos {
       flex-direction:column;
@@ -325,9 +350,16 @@ footer {
   }
   .navbar {
     padding-top: 68px;
+    font-size: 18px;
   }
   .navbar-menu-right {
     flex-direction: row;
     justify-content: space-between;
+  }
+  .date, .date-free-places {
+  	font-size: 20px;
+  	font-weight: 500;
+  	letter-spacing: 0.89px;
+  	line-height: 23px;
   }
 }
