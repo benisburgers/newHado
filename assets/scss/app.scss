@@ -135,15 +135,41 @@ section {
   color: $primary-color;
 }
 
-.top-bar {
+.navbar {
+  position: fixed;
+  position: sticky;
+  top: 0;
+  min-height: 200px;
+  padding-top: 30px;
   background: linear-gradient(black, rgba(255, 0, 0, 0));
+  font-family: Dosis;
   * {
     background-color: rgba(255, 0, 0, 0) !important;
-    color: white !important;
+  }
+  ul {
+    list-style: none;
+    margin: 0;
+  }
+  a {
+    color: white;
     &:hover{
       color: $primary-color !important;
+      transition: color .25s ease-in-out;
     }
   }
+}
+.navbar-menu-left {
+  display: flex;
+  li {
+    &:first-child {
+      padding-right: 30px;
+    }
+  }
+}
+.navbar-menu-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
 .menu {
@@ -226,6 +252,7 @@ section {
 .primary-border {
   border: 1px solid $primary-color;
   box-shadow: 0 0 5px $primary-color;
+  transition: border .25s, box-shadow .25s ease-in-out;
 }
 
 .switch-paddle {
@@ -284,7 +311,9 @@ footer {
     display: flex;
     justify-content: space-between;
   }
-  @include breakpoint(medium) {
+}
+@include breakpoint(medium) {
+  footer {
     .small-logos {
       flex-direction:column;
       justify-content: space-between;
@@ -293,5 +322,12 @@ footer {
     .buhler-logo {
       margin-bottom: 0;
     }
+  }
+  .navbar {
+    padding-top: 68px;
+  }
+  .navbar-menu-right {
+    flex-direction: row;
+    justify-content: space-between;
   }
 }
