@@ -79,6 +79,7 @@ body {
 
 * {
   color: white !important;
+  outline: none;
 }
 
 h1 {
@@ -392,4 +393,9 @@ footer {
 }
 .flickering-line {
   opacity: 0;
+}
+.orbit-previous, .orbit-next {
+  &:hover {
+    color: $primary-color !important;
+  }
 }

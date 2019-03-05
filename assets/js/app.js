@@ -114,4 +114,10 @@ $( document ).ready(function() {
         invertBottomOffset: true
     });
 
+    $('.main-carousel').flickity({
+      // options
+      cellAlign: 'left',
+      // contain: true
+    });
+
 });
