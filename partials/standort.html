@@ -1,5 +1,5 @@
 <section class="standort">
-  <div class="anchor-target" id="standort">
+  <div class="anchor-target" id="standort"></div>
   {{> section-top-border}}
   <div class="row align-justify">
     <div class="columns small-12 medium-5 large-40">
@@ -10,7 +10,8 @@
     </div>
     <div class="columns small-12 medium-7">
       <div class="standort-map">
-        <h2>Here comese the map - Image on small devices, map on large devices?</h2>
+        <div data-interchange="[{{root}}assets/map/map-mobile.html, small], [{{root}}assets/map/map-desktop.html, medium]">
+        </div>
       </div>
     </div>
   </div>

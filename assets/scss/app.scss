@@ -1,3 +1,7 @@
+$navbar-font-size: 15px;
+$navbar-font-size-large: 18px;
+$navbar-min-height: 150px;
+$navbar-min-height-large: 300px;
 @charset 'utf-8';
 
 @import 'settings';
@@ -134,16 +138,15 @@ section {
 .primary-text {
   color: $primary-color;
 }
-
 .navbar {
   position: fixed;
   position: sticky;
   top: 0;
-  min-height: 150px;
+  min-height: $navbar-min-height;
   padding-top: 30px;
   background: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0));
   font-family: Dosis;
-  font-size: 15px;
+  font-size: $navbar-font-size;
   z-index: 5;
   * {
     background-color: rgba(255, 0, 0, 0) !important;
@@ -172,16 +175,16 @@ section {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-}
-
-.menu {
-  a {
-	font-family: Dosis;
-	font-size: 13px;
-	font-weight: 500;
-	letter-spacing: 0.36px;
-	line-height: 16px;
+  li {
+    margin-bottom: 10px;
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
+}
+.navbar-icon {
+  width: auto;
+  height: $navbar-font-size;
 }
 
 .flickering-line {
@@ -195,6 +198,13 @@ section {
 .button {
   box-shadow: 0 0 20px 10px rgba($primary-color, .3) inset, 0 0 20px 10px rgba($primary-color, .3);
   transition: all 0.25s ease-in-out;
+}
+
+.header-image {
+  margin-top: calc(50px - #{$navbar-min-height});
+  img {
+    margin: 0 auto;
+  }
 }
 
 .date-option {
@@ -340,10 +350,19 @@ footer {
   	letter-spacing: 0.71px;
   }
   footer {
+    .large-logo {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
     .small-logos {
       flex-direction:column;
       justify-content: space-between;
       align-items: flex-end;
+      :first-child {
+        margin-bottom: 30px;
+      }
     }
     .buhler-logo {
       margin-bottom: 0;
@@ -351,12 +370,16 @@ footer {
   }
   .navbar {
     padding-top: 68px;
-    font-size: 18px;
-    min-height: 300px;
+    font-size: $navbar-font-size-large;
+    min-height: $navbar-min-height-large;
   }
   .navbar-menu-right {
     flex-direction: row;
     justify-content: space-between;
+  }
+  .navbar-icon {
+    height: $navbar-font-size-large;
+    padding-bottom: 0;
   }
   .date, .date-free-places {
   	font-size: 20px;
