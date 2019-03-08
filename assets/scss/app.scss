@@ -3,7 +3,9 @@
 @import 'settings';
 @import 'foundation';
 @import 'motion-ui';
-@import 'flicker';
+@import 'flicker-lamp';
+@import 'flicker-border';
+@import 'flicker-button';
 
 // Global styles
 @include foundation-global-styles;
@@ -72,6 +74,7 @@ $navbar-font-size: 15px;
 $navbar-font-size-large: 18px;
 $navbar-min-height: 150px;
 $navbar-min-height-large: 300px;
+$disabled-border: #515151;
 
 html {
   width: 100vw;
@@ -148,6 +151,12 @@ section {
 .primary-text {
   color: $primary-color;
 }
+
+.anchor-target {
+  position: absolute;
+  margin-top: -100px;
+}
+
 .navbar {
   position: fixed;
   position: sticky;
@@ -205,9 +214,8 @@ section {
   box-shadow: 0px 0px 20px 10px rgba(126, 211, 33, .3);
 }
 
-.button {
-  box-shadow: 0 0 20px 10px rgba($primary-color, .3) inset, 0 0 20px 10px rgba($primary-color, .3);
-  transition: all 0.25s ease-in-out;
+.button-enabled {
+  animation: flicker-button 2s linear both !important;
 }
 
 .header-image {
@@ -217,9 +225,13 @@ section {
   }
 }
 
+.dates {
+  margin-bottom: 30px;
+}
+
 .date-option {
   padding: 15px;
-  border: 1px solid #515151;
+  border: 1px solid $disabled-border;
   border-radius: 8px;
   margin-bottom: 25px;
   &:last-child {
@@ -281,6 +293,16 @@ section {
   	font-weight: 500;
   	letter-spacing: 0.28px;
   	line-height: 20px;
+    &:focus {
+      animation: flicker-border 2s linear both;
+    }
+    &.valid {
+      border: 1px solid $primary-color;
+      box-shadow: 0 0 5px $primary-color;
+      &:focus {
+        animation: none;
+      }
+    }
   }
 }
 
@@ -291,13 +313,6 @@ section {
 .footer-small-logos {
   display: flex;
   justify-content: space-between;
-}
-
-input {
-  &.disabled {
-    border: 1px solid rgba(#7ED321, .25);
-    box-shadow: none;
-  }
 }
 
 .standort-map {
@@ -382,6 +397,7 @@ footer {
     	line-height: 26px;
     }
   }
+
   .button {
   	font-size: 18px !important;
   	letter-spacing: 0.71px;
@@ -419,13 +435,15 @@ footer {
     height: $navbar-font-size-large;
     padding-bottom: 0;
   }
+  .dates {
+    margin-bottom: 0;
+  }
   .date, .date-free-places {
   	font-size: 20px;
   	font-weight: 500;
   	letter-spacing: 0.89px;
   	line-height: 23px;
   }
-  
   .main-carousel {
     max-width: none;
     .carousel-cell {

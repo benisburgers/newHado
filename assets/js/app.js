@@ -36,11 +36,11 @@ $( document ).ready(function() {
     var highlightDateOption = function() {
       var activeInput = $( ".switch-input:checked" );
       var parent = activeInput.parents('.date-option');
-      parent.addClass('primary-border');
+      parent.addClass('flicker-border');
 
       var inactiveInput = $( ".switch-input:not(:checked)" );
       var inactiveParent = inactiveInput.parents('.date-option');
-      inactiveParent.removeClass('primary-border');
+      inactiveParent.removeClass('flicker-border');
 
     }
     highlightDateOption();
@@ -66,10 +66,12 @@ $( document ).ready(function() {
           //if (name and email are valid) AND address fields are valid (or empty), return true. Else return false.
           if (checkMandatory()) {
             $('#ajaxButton').removeClass("disabled");
+            $('#ajaxButton').addClass("button-enabled");
             valid = true;
           }
           else {
             $('#ajaxButton').addClass("disabled");
+            $('#ajaxButton').removeClass("button-enabled");
             valid = false;
           }
         }
@@ -89,12 +91,12 @@ $( document ).ready(function() {
           var specificRegex = regex[input.attr('regex')];
           //If the field passes the regex test (is valid), removeClass .invalid (visual, red) from that field. Return true.
           if (specificRegex.test(value)) {
-            input.removeClass('disabled')
+            input.addClass('valid')
             return true;
           }
           //Else: addClass .invalid to that field and return false.
           else {
-            input.addClass('disabled')
+            input.removeClass('valid')
             return false;
           }
         }
@@ -118,7 +120,7 @@ $( document ).ready(function() {
 
     var $lights = $('.flickering-line');
     $lights.viewportChecker({
-        classToAdd: 'flicker-4',
+        classToAdd: 'flicker-lamp',
         repeat: true,
         offset: '15%',
         invertBottomOffset: true

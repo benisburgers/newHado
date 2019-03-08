@@ -1,6 +1,6 @@
-.flicker-4 {
-	-webkit-animation: flicker-4 4s linear both;
-	        animation: flicker-4 4s linear both;
+.flicker-lamp {
+	-webkit-animation: flicker-lamp 4s linear both;
+	        animation: flicker-lamp 4s linear both;
 }
 
 /* ----------------------------------------------
@@ -10,10 +10,10 @@
 
 /**
  * ----------------------------------------
- * animation flicker-4
+ * animation flicker-lamp
  * ----------------------------------------
  */
-@-webkit-keyframes flicker-4 {
+@-webkit-keyframes flicker-lamp {
   0%,
   100% {
     opacity: 1;
@@ -91,7 +91,7 @@
     opacity: 1;
   }
 }
-@keyframes flicker-4 {
+@keyframes flicker-lamp {
   0%,
   100% {
     opacity: 1;
