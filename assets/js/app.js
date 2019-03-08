@@ -17,6 +17,17 @@ require('foundation-sites');
 $(document).foundation();
 
 
+function checkViewPortWidth() {
+  if (Foundation.MediaQuery.atLeast('medium')) {
+    $('.main-carousel').addClass('row');
+    $('.carousel-cell').addClass('columns');
+  }
+  else {
+    $('.main-carousel').removeClass('row');
+    $('.carousel-cell').removeClass('columns');
+  }
+}
+
 $( document ).ready(function() {
 
 
@@ -112,5 +123,21 @@ $( document ).ready(function() {
         offset: '15%',
         invertBottomOffset: true
     });
-    
+
+    $('.main-carousel').flickity({
+      // options
+      cellAlign: 'left',
+      contain: true,
+      imagesLoaded: true,
+      pageDots: false,
+      prevNextButtons: false,
+      watchCSS: true
+    });
+
+    checkViewPortWidth();
+});
+
+
+$( window ).resize(function() {
+  checkViewPortWidth();
 });

@@ -73,8 +73,16 @@ $navbar-font-size-large: 18px;
 $navbar-min-height: 150px;
 $navbar-min-height-large: 300px;
 
+html {
+  width: 100vw;
+  height: 100vh;
+}
+
 body {
   background: black;
+  min-height: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 * {
@@ -315,6 +323,33 @@ footer {
     justify-content: space-between;
   }
 }
+
+.flickering-line {
+  opacity: 0;
+}
+.orbit-previous, .orbit-next {
+  &:hover {
+    color: $primary-color !important;
+  }
+}
+
+.main-carousel {
+  max-width: 100%;
+  img {
+    max-width: 100%;
+  }
+  //enable flickity be default
+  &:after {
+    content: 'flickity';
+    display: none; /* hide :after */
+  }
+  .carousel-cell {
+    width: 80%;
+    max-width: 300px;
+    margin-right: 20px;
+  }
+}
+
 @include breakpoint(medium) {
   h1 {
   	font-size: 36px;
@@ -390,12 +425,16 @@ footer {
   	letter-spacing: 0.89px;
   	line-height: 23px;
   }
-}
-.flickering-line {
-  opacity: 0;
-}
-.orbit-previous, .orbit-next {
-  &:hover {
-    color: $primary-color !important;
+  
+  .main-carousel {
+    max-width: none;
+    .carousel-cell {
+      max-width: none;
+      margin-right: 0px;
+    }
+    /* disable Flickity for large devices */
+    &:after {
+      content: '';
+    }
   }
 }
