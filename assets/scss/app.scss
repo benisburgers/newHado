@@ -268,8 +268,30 @@ section {
 	line-height: 40px;
 }
 
+
+.entourage {
+
+  .switch-container {
+    margin-bottom: 1rem;
+    display: flex;
+    .switch, label {
+      display: inline-block;
+    }
+  }
+
+  .input-container {
+    display: none;
+    align-items: baseline;
+    label {
+      margin-right: 30px;
+    }
+  }
+
+}
+
 .switch {
   margin-bottom: 0;
+  margin-right: 20px;
 }
 
 .primary-border {
