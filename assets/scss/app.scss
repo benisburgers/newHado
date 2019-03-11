@@ -234,10 +234,9 @@ section {
 }
 
 .header-image {
+  display: block;
   margin-top: calc(50px - #{$navbar-min-height});
-  img {
-    margin: 0 auto;
-  }
+  margin: 0 auto;
 }
 
 .dates {
