@@ -46,15 +46,30 @@ $( document ).ready(function() {
     highlightDateOption();
     switchInput.on( "click", highlightDateOption );
 
-
-
     var name = $("#name_input"),
         email = $("#mail_input"),
         phone = $("#phone_input"),
+        entourage = $("#entourage_input"),
+        guestSwitch = $('#guestSwitch'),
+        guestInput = $('#guest-input'),
+        guestIsComing = false,
         valid = false;
-    validate();
+
     function validate() {
           //Validate Form
+
+        $(guestSwitch).change(function() {
+          if(this.checked) {
+            $(guestInput).removeClass('hidden');
+            guestIsComing = true;
+          }
+          else {
+            $(guestInput).addClass('hidden');
+            guestIsComing = false;
+          }
+          checkForm();
+        });
+
 
         //Check form validity everytime value in input field is changed
         $(".input").on('input', function() {
@@ -101,9 +116,23 @@ $( document ).ready(function() {
           }
         }
 
+        function checkEntourage() {
+          if (guestIsComing) {
+            if (checkBox(entourage)) {
+              return true;
+            }
+            else {
+              return false;
+            }
+          }
+          else {
+            return true;
+          }
+        }
+
         //checkMandatory() MUST REMAIN AT BOTTOM OF SCRIPT!!!
         function checkMandatory() {
-          if (checkBox(name) & checkBox(email) & checkBox(phone)) {
+          if (checkBox(name) & checkBox(email) & checkBox(phone) & checkEntourage()) {
             return true;
           }
           else {
@@ -112,6 +141,7 @@ $( document ).ready(function() {
         }
         checkMandatory();
     }
+    validate();
 
     function disableButton() {
       $('#ajaxButton').addClass("disabled");

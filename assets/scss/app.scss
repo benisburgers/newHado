@@ -279,8 +279,12 @@ section {
     }
   }
 
+  .hidden {
+    display: none !important;
+  }
+
   .input-container {
-    display: none;
+    display: flex;
     align-items: baseline;
     label {
       margin-right: 30px;
