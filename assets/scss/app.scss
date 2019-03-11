@@ -270,12 +270,13 @@ section {
 
 
 .entourage {
-
   .switch-container {
     margin-bottom: 1rem;
     display: flex;
+    align-items: center;
     .switch, label {
       display: inline-block;
+      margin-bottom: 0;
     }
   }
 
