@@ -75,6 +75,8 @@ $navbar-font-size-large: 18px;
 $navbar-min-height: 150px;
 $navbar-min-height-large: 300px;
 $disabled-border: #515151;
+$navbar-padding-top-mobile: 30px;
+$navbar-padding-top-desktop: 68px;
 
 html {
   width: 100vw;
@@ -162,7 +164,7 @@ section {
   position: sticky;
   top: 0;
   min-height: $navbar-min-height;
-  padding-top: 30px;
+  padding-top: $navbar-padding-top-mobile;
   background: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0));
   font-family: Dosis, sans-serif;
   font-size: $navbar-font-size;
@@ -188,6 +190,19 @@ section {
     &:first-child {
       padding-right: 30px;
     }
+  }
+}
+
+.icons-container {
+  position: absolute;
+  z-index: 5;
+  top: 0;
+  right: 0;
+  padding-top: $navbar-padding-top-mobile;
+  width: 100%;
+  ul {
+    list-style: none;
+    margin: 0;
   }
 }
 .navbar-menu-right {
@@ -449,9 +464,12 @@ footer {
     }
   }
   .navbar {
-    padding-top: 68px;
+    padding-top: $navbar-padding-top-desktop;
     font-size: $navbar-font-size-large;
     min-height: $navbar-min-height-large;
+  }
+  .icons-container {
+    padding-top: $navbar-padding-top-desktop;
   }
   .navbar-menu-right {
     flex-direction: row;
