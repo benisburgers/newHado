@@ -6,6 +6,7 @@
 @import 'flicker-lamp';
 @import 'flicker-border';
 @import 'flicker-button';
+@import 'easing-gradient';
 
 // Global styles
 @include foundation-global-styles;
@@ -72,11 +73,11 @@
 
 $navbar-font-size: 15px;
 $navbar-font-size-large: 18px;
-$navbar-min-height: 150px;
-$navbar-min-height-large: 300px;
+$navbar-min-height: 100px;
+$navbar-min-height-large: 150px;
 $disabled-border: #515151;
 $navbar-padding-top-mobile: 30px;
-$navbar-padding-top-desktop: 68px;
+$navbar-padding-top-desktop: 30px;
 
 html {
   width: 100vw;
@@ -160,15 +161,13 @@ section {
 }
 
 .navbar {
-  position: fixed;
-  position: sticky;
-  top: 0;
+  position: relative;
   min-height: $navbar-min-height;
   padding-top: $navbar-padding-top-mobile;
-  background: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0));
+  background: rgba(0, 0, 0, 0);
   font-family: Dosis, sans-serif;
   font-size: $navbar-font-size;
-  z-index: 5;
+  z-index: 10;
   * {
     background-color: rgba(255, 0, 0, 0) !important;
   }
@@ -183,6 +182,14 @@ section {
       transition: color .25s ease-in-out;
     }
   }
+  .columns {
+    display: flex;
+  }
+}
+.navbar-left {
+  .navbar-left-child {
+    position: fixed;
+  }
 }
 .navbar-menu-left {
   display: flex;
@@ -192,18 +199,9 @@ section {
     }
   }
 }
-
-.icons-container {
-  position: absolute;
-  z-index: 5;
-  top: 0;
-  right: 0;
-  padding-top: $navbar-padding-top-mobile;
-  width: 100%;
-  ul {
-    list-style: none;
-    margin: 0;
-  }
+.navbar-right {
+  justify-content: flex-end;
+  position: relative;
 }
 .navbar-menu-right {
   display: flex;
@@ -219,6 +217,15 @@ section {
 .navbar-icon {
   width: auto;
   height: $navbar-font-size;
+}
+.navbar-background {
+  position: fixed;
+  top: 0;
+  z-index: 5;
+  height: $navbar-min-height;
+  width: 100%;
+  padding-top: $navbar-padding-top-mobile;
+  @include easing-gradient;
 }
 
 .flickering-line {
@@ -461,22 +468,20 @@ footer {
       margin-bottom: 0;
     }
   }
+  .navbar-icon {
+    height: $navbar-font-size-large;
+    padding-bottom: 0;
+  }
   .navbar {
     padding-top: $navbar-padding-top-desktop;
     font-size: $navbar-font-size-large;
     min-height: $navbar-min-height-large;
   }
-  .icons-container {
-    padding-top: $navbar-padding-top-desktop;
-  }
   .navbar-menu-right {
+    width: 100%;
     flex-direction: row;
     justify-content: space-between;
     align-items: baseline;
-  }
-  .navbar-icon {
-    height: $navbar-font-size-large;
-    padding-bottom: 0;
   }
   .dates {
     margin-bottom: 0;
