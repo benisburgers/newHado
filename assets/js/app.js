@@ -19,12 +19,12 @@ $(document).foundation();
 
 function checkViewPortWidth() {
   if (Foundation.MediaQuery.atLeast('medium')) {
-    $('.main-carousel').addClass('row');
-    $('.carousel-cell').addClass('columns');
+    $('.gallery-outside').addClass('row').removeClass('main-carousel');
+    $('.gallery-inside').addClass('columns').removeClass('carousel-cell');
   }
   else {
-    $('.main-carousel').removeClass('row');
-    $('.carousel-cell').removeClass('columns');
+    $('.gallery-outside').removeClass('row').addClass('main-carousel');
+    $('.gallery-inside').removeClass('columns').addClass('carousel-cell');
   }
 }
 
