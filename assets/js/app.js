@@ -35,6 +35,8 @@ $(document).ready(function() {
 	    entourage = $("#entourage_input"),
 	    guestSwitch = $('#guestSwitch'),
 	    guestInput = $('#guest-input'),
+      form = $('#anmelde_formular'),
+      thankYou = $('#thankYou'),
 	    guestIsComing = false,
 	    valid = false;
 
@@ -48,6 +50,8 @@ $(document).ready(function() {
     function makeRequest(isValid) {
         //access entered email value for confirmation
         if (isValid) {
+          form.addClass('invisible');
+          thankYou.addClass('visible');
         	// get selected date
         	var dateSelected = $('.flicker-border').find('span.date').html();
 			$('#date_selected').val(dateSelected);
