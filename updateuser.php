@@ -1,5 +1,5 @@
 <?php
-echo "test";
+    echo "updateuser";
 	// define content type
 	header('Content-type: text/html; charset=utf-8');
 
@@ -26,18 +26,18 @@ echo "test";
 	}
 
 	// database connection
-    // $dbHost = 'localhost';
-    // $dbUser = 'root';
-    // $dbPass = 'root';
-    // $dbName = 'registrations';
-    // $guestTable = 'guests';
+    $dbHost = 'localhost';
+    $dbUser = 'root';
+    $dbPass = 'root';
+    $dbName = 'registrations';
+    $guestTable = 'guests';
 
     // server
-    $dbHost = 'localhost';
-    $dbUser = 'hado_user';
-    $dbPass = 's5^Zup68';
-    $dbName = 'hado';
-    $guestTable = 'participant';
+    // $dbHost = 'localhost';
+    // $dbUser = 'bin-nl';
+    // $dbPass = 'S4qpy6$5';
+    // $dbName = 'bin_nl_';
+    // $guestTable = 'participant';
 
     // connect database
     $con = new mysqli($dbHost, $dbUser, $dbPass, $dbName);

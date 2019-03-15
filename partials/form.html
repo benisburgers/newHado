@@ -1,16 +1,16 @@
-<form class="anmelde-formular novalidate" id="anmelde_formular" action="#">
+<form class="anmelde-formular novalidate" id="anmelde_formular" action="#" method="post">
 	<div class="input-fields-container">
 		<div class="name">
 			<label for="name_input">Name</label>
-			<input class="input" type="text" id="name_input" placeholder="Bitte aüsfüllen" regex='name'>
+			<input class="input" type="text" id="name_input" name="name_input" placeholder="Bitte aüsfüllen" regex='name'>
 		</div>
 		<div class="phone">
 			<label for="phone_input">Telefon</label>
-			<input class="input" type="text" id="phone_input" placeholder="Bitte aüsfüllen" regex='phone'>
+			<input class="input" type="text" id="phone_input" name="phone_input" placeholder="Bitte aüsfüllen" regex='phone'>
 		</div>
 		<div class="mail">
 			<label for="mail_input">E-Mail</label>
-			<input class="input" type="text" id="mail_input" placeholder="Bitte aüsfüllen" regex='email'>
+			<input class="input" type="text" id="mail_input" name="mail_input" placeholder="Bitte aüsfüllen" regex='email'>
 		</div>
 		<div class="entourage">
 			<div class="switch-container">
@@ -24,9 +24,11 @@
 			</div>
 			<div class="input-container hidden" id="guest-input">
 				<label for="entourage_input">Name</label>
-				<input class="input" type="text" id="entourage_input" placeholder="Bitte aüsfüllen" regex='name'>
+				<input class="input" type="text" id="entourage_input" name="entourage_input" placeholder="Bitte aüsfüllen" regex='name'>
 			</div>
 		</div>
 	</div>
+
+	<input type="text" id="date_selected" name="date_selected" value="">
 	<input type="submit" class="button expanded hollow disabled" value="Anmelden" id="ajaxButton">
 </form>

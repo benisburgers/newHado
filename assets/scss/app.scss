@@ -412,6 +412,10 @@ footer {
   }
 }
 
+#date_selected {
+  display: none;
+}
+
 @include breakpoint(medium) {
   h1 {
   	font-size: 36px;

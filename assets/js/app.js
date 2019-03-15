@@ -48,6 +48,10 @@ $(document).ready(function() {
     function makeRequest(isValid) {
         //access entered email value for confirmation
         if (isValid) {
+        	// get selected date
+        	var dateSelected = $('.flicker-border').find('span.date').html();
+			$('#date_selected').val(dateSelected);
+
             // declare form element
             var formElement = document.getElementById("anmelde_formular");
 
@@ -70,7 +74,6 @@ $(document).ready(function() {
             httpRequest.onreadystatechange = function() {
                 if (this.readyState == 4 && this.status == 200) {
                     // TODO: show confirm text if successful
-                    //document.getElementById("debug").innerHTML = this.responseText;
                     console.log(this.responseText);
                 }
             };
@@ -78,8 +81,6 @@ $(document).ready(function() {
             httpRequest.open("POST", "updateuser.php", /* async = */ true);
             httpRequest.send(new FormData(formElement));
             // TODO for BENI: write a function who hides the form when the datas are sent. --> hideForm();
-
-            console.log("finished");
         } else {
         	console.log("form is not valid");
         }
