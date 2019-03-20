@@ -266,6 +266,18 @@ section {
   &:last-child {
     margin-bottom: 0px;
   }
+
+  &.disabled {
+    border-color: gray !important;
+    animation: none;
+    color: gray !important;
+    pointer-events: none;
+    opacity: .2;
+
+      input:checked ~ .switch-paddle::after {
+          left: 1rem;
+      }
+  }
 }
 
 .date-top {
