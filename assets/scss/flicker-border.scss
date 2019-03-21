@@ -8,11 +8,8 @@
   box-shadow: none;
 }
 
-//Same principal as above used for .primary-border
-
 .flicker-border {
-	-webkit-animation: flicker-border 2s linear both;
-	        animation: flicker-border 2s linear both;
+	animation: flicker-border 4s linear both;
 }
 
 /* ----------------------------------------------

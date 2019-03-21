@@ -35,8 +35,8 @@ $(document).ready(function() {
 	    entourage = $("#entourage_input"),
 	    guestSwitch = $('#guestSwitch'),
 	    guestInput = $('#guest-input'),
-      form = $('#anmelde_formular'),
-      thankYou = $('#thankYou'),
+      	form = $('#anmelde_formular'),
+      	thankYou = $('#thankYou'),
 	    guestIsComing = false,
 	    valid = false;
 

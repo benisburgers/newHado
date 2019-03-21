@@ -321,15 +321,19 @@ section {
     }
   }
 
-  .hidden {
-    display: none !important;
-  }
-
   .input-container {
     display: flex;
     align-items: baseline;
+    height: 2.4375rem;
+    transition: height .2s;
+    overflow: hidden;
+
     label {
       margin-right: 30px;
+    }
+
+    &.hidden {
+      height: 0;
     }
   }
 

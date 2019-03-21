@@ -1,6 +1,5 @@
 <?php
-    echo "updateuser";
-	// define content type
+    // define content type
 	header('Content-type: text/html; charset=utf-8');
 
     // store form data
